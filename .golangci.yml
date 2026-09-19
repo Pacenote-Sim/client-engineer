@@ -1,0 +1,160 @@
+# golangci-lint v2 configuration. Validate with: golangci-lint config verify
+#
+# The same linter set as the server and the plugins. The dependency rule is the
+# one that matters here: this module is a contract, and the day it imports
+# anything but the standard library and the wire protocol it stops being one a
+# plugin author can depend on cheaply.
+version: "2"
+
+run:
+  timeout: 5m
+  tests: true
+  modules-download-mode: readonly
+
+output:
+  show-stats: true
+
+linters:
+  default: none
+  enable:
+    - bodyclose
+    - copyloopvar
+    - depguard
+    - errcheck
+    - errorlint
+    - exhaustive
+    - gocritic
+    - gosec
+    - govet
+    - ineffassign
+    - intrange
+    - nilerr
+    - nolintlint
+    - paralleltest
+    - prealloc
+    - revive
+    - staticcheck
+    - testifylint
+    - thelper
+    - unparam
+    - unused
+    - wrapcheck
+
+  settings:
+    depguard:
+      rules:
+        companion-is-stdlib-contract-and-protocol:
+          list-mode: strict
+          files:
+            - "!$test"
+          allow:
+            - $gostd
+            - github.com/pacenote-sim/client-engineer
+            - github.com/pacenote-sim/clientplugin
+            - github.com/pacenote-sim/protocol
+        tests-use-testing-deps-only:
+          list-mode: strict
+          files:
+            - "**_test.go"
+          allow:
+            - $gostd
+            - github.com/pacenote-sim/client-engineer
+            - github.com/pacenote-sim/clientplugin
+            - github.com/pacenote-sim/protocol
+            - github.com/stretchr/testify
+    errcheck:
+      check-type-assertions: true
+      check-blank: false
+      exclude-functions:
+        - fmt.Fprint
+        - fmt.Fprintf
+        - fmt.Fprintln
+    errorlint:
+      errorf: true
+      asserts: true
+      comparison: true
+    exhaustive:
+      default-signifies-exhaustive: true
+    gocritic:
+      enabled-tags:
+        - diagnostic
+        - performance
+        - style
+      disabled-checks:
+        - unnamedResult
+        - hugeParam
+    gosec:
+      excludes:
+        - G104 # duplicates errcheck
+    govet:
+      enable-all: true
+      disable:
+        - fieldalignment
+    nolintlint:
+      require-explanation: true
+      require-specific: true
+      allow-unused: false
+    paralleltest:
+      ignore-missing: false
+    revive:
+      severity: warning
+      rules:
+        - name: blank-imports
+        - name: context-as-argument
+        - name: context-keys-type
+        - name: dot-imports
+        - name: empty-block
+        - name: error-naming
+        - name: error-return
+        - name: error-strings
+        - name: errorf
+        - name: exported
+        - name: increment-decrement
+        - name: indent-error-flow
+        - name: package-comments
+        - name: range
+        - name: receiver-naming
+        - name: redefines-builtin-id
+        - name: superfluous-else
+        - name: time-naming
+        - name: unexported-return
+        - name: unreachable-code
+        - name: unused-parameter
+        - name: var-declaration
+        - name: var-naming
+    staticcheck:
+      checks:
+        - all
+        - -ST1000 # package comments are checked by revive
+    testifylint:
+      enable-all: true
+    thelper:
+      test:
+        first: true
+        name: true
+        begin: true
+    wrapcheck:
+      ignore-sigs:
+        - .Errorf(
+        - errors.New(
+        - errors.Join(
+        - errors.Unwrap(
+        - fmt.Errorf(
+
+  exclusions:
+    generated: lax
+    rules:
+      - path: _test\.go
+        linters:
+          - gosec
+          - wrapcheck
+          - unparam
+
+formatters:
+  enable:
+    - gofumpt
+    - goimports
+  settings:
+    goimports:
+      local-prefixes:
+        - github.com/pacenote-sim/client-engineer

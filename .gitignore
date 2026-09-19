@@ -1,0 +1,24 @@
+# Go build and test output
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+*.prof
+/coverage.html
+
+# Go workspace files. go.work lives one directory up and links this module to
+# the server for local development; it belongs to no repository.
+go.work
+go.work.sum
+
+# Editors and operating systems
+.idea/
+.vscode/
+*.swp
+.DS_Store
+
+# Nothing under testdata/ is ignored, deliberately: a crasher the fuzzer writes
+# there is a regression test that should be committed the moment it appears.

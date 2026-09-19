@@ -1,0 +1,8 @@
+{
+  "name": "engineer",
+  "kind": "companion",
+  "title": "Race engineer",
+  "description": "Posts each lap's corners to engineer after the last corner, plays its line for each corner as it approaches, the radio after a race lap, and shows the debrief.",
+  "interface_version": 1,
+  "server_plugin": "engineer"
+}

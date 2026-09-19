@@ -1,0 +1,10 @@
+github.com/pacenote-sim/clientplugin v0.1.0 h1:sicbO3anxorSTERmRJa2s+W372uEjlV7p+lFAxuA+lc=
+github.com/pacenote-sim/clientplugin v0.1.0/go.mod h1:Vb4PjKDUi73wTZWb4UBob+lj9twm2NQaHvnvym0gBAE=
+github.com/pacenote-sim/protocol v0.2.0 h1:2DIi4EhVZtVEmnt0eI8AMJIzbTcQTiMekebIGo7gnjQ=
+github.com/pacenote-sim/protocol v0.2.0/go.mod h1:blcjClZCj3Q+MZWCOh6bFo2YNf+NLMaNhmZHY8sIFzI=
+github.com/stretchr/testify v1.12.1 h1:EuwCh5fleGS7H32xRwO3wRGT7DxrDhLAT6FF8MpWDWE=
+github.com/stretchr/testify v1.12.1/go.mod h1:MDEgiDPPsNp5cuIrHPPCyornHKgEVbtFUmoNlxoYthg=
+go.uber.org/goleak v1.3.0 h1:2K3zAYmnTNqV73imy9J1T3WC+gmCePx2hEGkimedGto=
+go.uber.org/goleak v1.3.0/go.mod h1:CoHD4mav9JJNrW/WLlf7HGZPjdw8EucARQHekz1X6bE=
+go.yaml.in/yaml/v3 v3.0.5 h1:N6y/pJk8buWs9NY5ERU2HSMfm+IuD/OtfdAnq6kESPw=
+go.yaml.in/yaml/v3 v3.0.5/go.mod h1:HVTZu1O7/Vkt2N+BFy8Zza+lnLsABggaTM2ZpNIGuKg=
