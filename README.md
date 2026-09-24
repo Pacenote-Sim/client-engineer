@@ -77,5 +77,8 @@ says so.
 
 ## Licence
 
-GNU General Public License, version 3 — see `LICENSE`. Like the client and engineer. The contract it
-is built on (`github.com/pacenote-sim/clientplugin`) is Apache-2.0.
+GNU General Public License, version 3 — see `LICENSE` — with the Pacenote Plugin Exception in
+`LICENSE-EXCEPTION`, the same one the client carries. It lets this plugin be compiled into a client
+alongside plugins under other licences, including closed ones, and lets that client be handed out
+under those plugins' own terms while this plugin's part stays GPL. The contract it is built on
+(`github.com/pacenote-sim/clientplugin`) is Apache-2.0.

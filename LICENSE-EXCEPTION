@@ -1,0 +1,81 @@
+PACENOTE PLUGIN EXCEPTION TO THE GNU GENERAL PUBLIC LICENSE
+Version 1, 24 September 2026
+
+This is an additional permission under section 7 of the GNU General Public
+License, version 3 or later ("the GPL"), granted by the copyright holders of
+the Pacenote engineer companion plugin
+(github.com/pacenote-sim/client-engineer), referred to below as "the Program".
+It does not change the GPL; it adds to it. Everything the GPL permits, this
+exception permits too. Where this exception permits more, it says so below.
+
+0. Definitions
+
+"Plugin Contract" means the module github.com/pacenote-sim/plugin (the
+contract between a Pacenote server and a server plugin), the module
+github.com/pacenote-sim/clientplugin (the contract between a Pacenote client
+and a client plugin), and any later version of either as published by the
+Pacenote project.
+
+"Pacenote Plugin" means a work that
+
+  (a) is written against a Plugin Contract and interacts with the Program only
+      through the interfaces, types and protocol that the Plugin Contracts and
+      the Program publish for that purpose, which for another plugin compiled
+      into the same Pacenote client as the Program means sharing that
+      executable and interacting with the Program, if at all, only through
+      the client and the Plugin Contracts; and
+
+  (b) is not otherwise a modified version of the Program and incorporates no
+      part of the Program beyond what using those published interfaces
+      requires.
+
+"Combined Work" means a work produced by combining or linking the Program, or
+a modified version of it, with one or more Pacenote Plugins. A Pacenote client
+executable compiled with the Program and the other plugins an operator has
+chosen is a Combined Work.
+
+1. Pacenote Plugins may carry any licence
+
+A Pacenote Plugin is not, by reason of being written against a Plugin
+Contract or of using the interfaces described in 0(a), a work based on the
+Program. Its author may license it under any terms they choose, including
+terms that are not compatible with the GPL.
+
+2. Conveying a Combined Work
+
+You may convey a Combined Work, in object code or executable form, under
+terms of your choice for the Pacenote Plugins it contains, provided that:
+
+  (a) the Program, and any modified version of it, contained in the Combined
+      Work remains licensed under the GPL, and you comply with the GPL for
+      that part, including making its Corresponding Source available in one
+      of the ways section 6 of the GPL describes;
+
+  (b) neither the terms under which you convey the Combined Work nor any
+      technical measure in it restricts the rights the GPL grants over the
+      Program part; and
+
+  (c) you give prominent notice with the Combined Work that the Program is
+      used in it and is covered by the GPL, and you include a copy of the GPL
+      and of this exception.
+
+3. What this exception does not cover
+
+This exception does not apply to a work that modifies the Program, except as
+section 4 allows. Calling something a plugin does not make it one: a work
+that reaches into the Program other than through the interfaces in 0(a), or
+that reproduces a substantial part of the Program, is a modified version of
+the Program and is covered by the GPL alone.
+
+4. Modified versions of the Program
+
+If you modify the Program, you may extend this exception to your version, but
+you are not obliged to. If you do not, your version is licensed under the GPL
+without this exception. Under section 7 of the GPL, anyone conveying the
+Program may also remove this additional permission from the copy they convey.
+
+5. No other change
+
+Except as stated here, the GPL applies to the Program unchanged. This
+exception is not a licence to use the name "Pacenote", the project's marks,
+or any signing identity of the Pacenote project.
